@@ -25,9 +25,30 @@ h1{
 .btn{
     padding: 15px;
     background-color: rgb(43, 124, 124);
+    border-radius: 50%;
+    border: 1px solid black;
+    margin-top: 15px;
 }
 
 .btn2{
-    padding: 15px;
+    padding: 10px 15px;
     background-color: green;
+    border: 1px solid black;
+    color: white;
+    margin-left: 35%;
+    margin-top: 10px;
+}
+
+.input-group {
+    display: flex;
+    justify-content: center;
+}
+
+.text{
+    width: 100%;
+    margin-top: 15px;
+}
+
+.task-done {
+    text-decoration: line-through;
 }

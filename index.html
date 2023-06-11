@@ -13,43 +13,24 @@
         <div class="container">
             <h1>ToDo List</h1>
             <ul>
-                <li>1
-                    <button class="btn">
-                        <i class="fa-regular fa-trash"></i>
-                    </button>
-                </li>
-                <li>1
-                    <button class="btn">
-                        <i class="fa-regular fa-trash"></i>
-                    </button>
-                </li>
-                <li>1
-                    <button class="btn">
-                        <i class="fa-regular fa-trash"></i>
-                    </button>
-                </li>
-                <li>1
-                    <button class="btn">
-                        <i class="fa-regular fa-trash"></i>
-                    </button>
-                </li>
-                <li>1
-                    <button class="btn">
-                        <i class="fa-regular fa-trash"></i>
-                    </button>
-                </li>
-                <li>1
+                <li v-for="(task, index) in tasks">
+                    <div :class="task.done ? 'task-done' : ''"> 
+                        {{task.text}}
+                    </div>
                     <button class="btn">
                         <i class="fa-regular fa-trash"></i>
                     </button>
                 </li>
             </ul>
-            <div class="input">
-                <input type="text" placeholder="Nuova Task" name="new_task" id="new_task">
-                <button class="btn2">
-                    <i class="fa-solid fa-plus"></i>
-                </button>
+            <div class="input-group">
+                <div class="input">
+                    <input type="text" class="text" placeholder="Nuova Task" name="new_task" id="new_task">
+                    <button class="btn2">
+                        <i class="fa-solid fa-plus"></i> ADD
+                    </button>
+                </div>
             </div>
+            
         </div>
       </div>
    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
