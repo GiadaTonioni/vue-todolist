@@ -36,6 +36,9 @@ createApp({
   methods:{
     changeTaskStatus(index){
       this.tasks[index].done = !this.tasks[index].done; //al click gli assegno il suo opposto
+    },
+    deleteTask(index){
+      this.tasks.splice(index,1)
     }
   }
 }).mount('#app')

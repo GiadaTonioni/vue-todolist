@@ -18,6 +18,11 @@
         <div class="container">
             <h1>ToDo List</h1>
             <ul class="list-unstyled">
+                <div v-if="tasks.length === 0">
+                    <h4 class="text-center">
+                        Non ci sono task da fare
+                    </h4>
+                </div>
                 <li v-for="(task, index) in tasks">
                     <div class="d-flex justify-content-between">
                         <div :class="task.done ? 'task-done' : ''"> 
@@ -28,7 +33,7 @@
                             @click="changeTaskStatus(index)">
                                 <i class="fas" :class="task.done ? 'fa-x' : 'fa-check'"></i>
                             </button>
-                            <button class="btn btn-sm btn-danger">
+                            <button class="btn btn-sm btn-danger" @click="deleteTask(index)">
                                 <i class="fa-solid fa-trash"></i>
                             </button>
                         </div>
