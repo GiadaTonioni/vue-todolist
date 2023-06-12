@@ -24,14 +24,16 @@
                             {{task.text}}
                         </div>
                         <div>
-                            <button class="btn btn-sm" :class="task.done ? 'btn-primary' : ''">
-                                <i class="fas" :class="task.done ? 'fa-check' : ''"></i>
+                            <button class="me-2 btn btn-sm" :class="task.done ? 'btn-dark' : 'btn-primary'"
+                            @click="changeTaskStatus(index)">
+                                <i class="fas" :class="task.done ? 'fa-x' : 'fa-check'"></i>
                             </button>
                             <button class="btn btn-sm btn-danger">
                                 <i class="fa-solid fa-trash"></i>
                             </button>
                         </div>
                     </div>
+                    <hr>
                 </li>
             </ul>
             <div class="input-group">
