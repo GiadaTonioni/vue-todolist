@@ -47,7 +47,7 @@
             <div class="input-group">
                 <div class="col-6 d-flex justify-content-center">
                     <input type="text" class="text" placeholder="Nuova Task" name="new_task" id="new_task"
-                    @keyup.enter="addTask">
+                    v-model="new_task" @keyup.enter="addTask">
                 </div>
                 <div class="col-3 d-flex justify-content-center">
                     <button class="btn btn-success" @click="addTask">
