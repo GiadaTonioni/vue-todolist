@@ -33,6 +33,9 @@
                             @click="changeTaskStatus(index)">
                                 <i class="fas" :class="task.done ? 'fa-x' : 'fa-check'"></i>
                             </button>
+                            <button class="me-2 btn btn-sm btn-warning">
+                                <i class="fas fa-edit" @click="editTask(index)"></i>
+                            </button>
                             <button class="btn btn-sm btn-danger" @click="deleteTask(index)">
                                 <i class="fa-solid fa-trash"></i>
                             </button>
