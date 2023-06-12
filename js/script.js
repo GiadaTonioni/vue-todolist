@@ -5,6 +5,7 @@ let id = 0
 createApp({
   data() {
     return {
+      new_task: '',
       tasks: [
         {
           text: 'Fare la spesa',
@@ -39,6 +40,15 @@ createApp({
     },
     deleteTask(index){
       this.tasks.splice(index,1)
+    },
+    addTask(){
+      console.log(this.new_task)
+      let obj = {
+        text: this.new_task,
+        done:false
+      }
+      this.tasks.push(obj)
+      
     }
   }
 }).mount('#app')
