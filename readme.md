@@ -6,4 +6,7 @@ PROBLEMA: Fare una todolist, Creare un array di oggetti ( con proprietà text e 
 3 - Richiamo la proprietà text di ogni oggetto nel dom con v-for
 4 - con binding creo una classe task done andando a richiamare il true o false 
 5 - Creo un modo per cambiare stato ad un task
+    5.1 - realizzo elementi statici
+    5.2 - creo e collego un method per cambiare lo stato del pulsante implementandone l'esecuzione
+
 
